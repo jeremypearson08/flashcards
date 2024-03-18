@@ -7,4 +7,12 @@ function createCard(id, question, answers, correctAnswer) {
     };
 }
 
-module.exports = { createCard };
+function evaluateGuess(guess, correctAnswer) {
+    if (guess === correctAnswer) {
+        return 'correct!'
+    } else {
+        return 'incorrect!'
+    }
+}
+
+module.exports = { createCard, evaluateGuess };
