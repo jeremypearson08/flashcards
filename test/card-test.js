@@ -1,7 +1,7 @@
 const chai = require('chai');
 const expect = chai.expect;
 
-const { createCard } = require('../src/card');
+const { createCard, evaluateGuess } = require('../src/card');
 
 describe('card', function() {
   it('should be a function', function() {
@@ -16,4 +16,14 @@ describe('card', function() {
     expect(card.answers).to.deep.equal(['object', 'array', 'function']);
     expect(card.correctAnswer).to.equal('object');
   });  
+});
+
+describe('turn', function() {
+  it('should be a function', function() {
+    expect(evaluateGuess).to.be.a('function');
+  });
+  it('should return correct! when answer is correct', function() {
+  });
+  it('should return incorrect! when answer is incorrect', function() {
+  });
 });
